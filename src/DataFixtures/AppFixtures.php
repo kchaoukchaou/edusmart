@@ -18,6 +18,14 @@ class AppFixtures extends Fixture
         $user->setPassword($password);
         $user->setRoles(['ROLE_SUPER_ADMIN']);
         $manager->persist($user);
+
+        $user1 = new User();
+        $user1->setEmail('kchaouyassine93@gmail.com');
+        $password1 =password_hash('yas1234', PASSWORD_ARGON2I);
+        $user1->setPassword($password1);
+        $user1->setRoles(['ROLE_SUPER_ADMIN']);
+        $manager->persist($user1);
+
         $manager->flush();
     }
 }

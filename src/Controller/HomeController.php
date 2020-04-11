@@ -16,6 +16,6 @@ class HomeController extends AbstractController
     public function register(Request $request): Response
     {
 
-        return $this->render('app/dashboard.html.twig', []);
+        return $this->render('backoffice/app/dashboard.html.twig', []);
     }
 }

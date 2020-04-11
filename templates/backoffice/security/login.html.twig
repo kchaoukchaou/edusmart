@@ -1,9 +1,6 @@
 {% extends 'baseLogin.html.twig' %}
 
 {% block body %}
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <div class="auth-wrapper">
         <div class="container-fluid h-100">
@@ -18,8 +15,7 @@
                         <div class="logo-centered">
                             <a href="../index.html"><img src="../src/img/brand.svg" alt=""></a>
                         </div>
-                        <h3>Sign In to ThemeKit</h3>
-                        <p>Happy to see you again!</p>
+                        <h3>{{'login.connexion'|trans}}</h3>
                         <form method="post">
                             {% if error %}
                                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -36,7 +32,7 @@
                                 <i class="ik ik-user"></i>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" required="" name="password" id="inputPassword" >
+                                <input type="password" class="form-control" placeholder="Mot de passe" required="" name="password" id="inputPassword" >
                                 <i class="ik ik-lock"></i>
                             </div>
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
@@ -49,16 +45,16 @@
                                     </label>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="forgot-password.html">Forgot Password ?</a>
+                                    <a href="{{ path('app_forgotten_password') }}">{{'forgot_password.titre'|trans}}</a>
                                 </div>
                             </div>
                             <div class="sign-btn text-center">
-                                <button type="submit" class="btn btn-theme">Sign In</button>
+                                <button type="submit" class="btn btn-theme">{{ 'login.button.connecter'|trans }}</button>
                             </div>
                         </form>
-                        <div class="register">
+                     <!--   <div class="register">
                             <p>Don't have an account? <a href="register.html">Create an account</a></p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

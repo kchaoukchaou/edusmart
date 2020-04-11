@@ -1,0 +1,10 @@
+login:
+    connexion: Se Connecter
+    button:
+        connecter: Connecter
+forgot_password:
+    titre: Mot de passe oublié
+    message: Nous vous enverrons un lien pour réinitialiser le mot de passe.
+logout: Déconnexion
+menu:
+    dashboard: Tableau de bord
